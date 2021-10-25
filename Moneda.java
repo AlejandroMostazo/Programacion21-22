@@ -8,25 +8,29 @@ public class Moneda {
 		System.out.println("Introduce la cantidad de dinero a convertir:");
 		double cantidad = Integer.parseInt(System.console().readLine());
 		euros = cantidad;
-		
-		switch (moneda) {
-			case "dolares":
-				euros = cantidad * mdolar;
-			break;
-			case "yenes":
-				euros = cantidad * myenes;
-			break;
-			case "libras":
-				euros = cantidad * mlibras;
-			break;
-			case "yuanes":
-				euros = cantidad * myuanes;
-			
-		}
 		dolares = cantidad * mdolar;
 		yenes = cantidad * myenes;
 		libras = cantidad * mlibras;
 		yuanes = cantidad * myuanes;
+		switch (moneda) {
+			case "dolares":
+				euros = cantidad * mdolar;
+				dolares = cantidad;
+			break;
+			case "yenes":
+				euros = cantidad * myenes;
+				yenes = cantidad;
+			break;
+			case "libras":
+				euros = cantidad * mlibras;
+				libras = cantidad;
+			break;
+			case "yuanes":
+				euros = cantidad * myuanes;
+				yuanes = cantidad;
+			
+		}
+		
 		System.out.println("La cantidad de dinero en euros es:"+euros);
 		System.out.println("La cantidad de dinero en dolares es:"+dolares);
 		System.out.println("La cantidad de dinero en yenes es:"+yenes);
